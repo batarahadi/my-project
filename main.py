@@ -1,0 +1,3 @@
+
+
+print("OpenCV version:")
