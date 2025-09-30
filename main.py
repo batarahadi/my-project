@@ -21,7 +21,6 @@ def recognize_gesture(hands_landmarks):
         ujung_jempol.y < ujung_manis.y and
         ujung_jempol.y < ujung_kelingking.y):
         return "Thumbs up"
-    
     return "Gesture tidak diketahui"
 
 # fungsi mendeteksi tangan dengan mediapipe
@@ -36,9 +35,7 @@ def detect_hands_gesture(image,hand):
             # gambar tangan terdeteksi
             mp_draw.draw_landmarks(image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
             # tampilkan teks gesture
-            cv2.putText(image, gesture, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 
-                        1, (255, 0, 0), 2, cv2.LINE_AA)
-    
+            cv2.putText(image, gesture, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2, cv2.LINE_AA)
     return image
 
 # Membuka Kamera 0 (biasanya webcam utama)
