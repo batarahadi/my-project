@@ -1,13 +1,14 @@
 from tkinter import *
+from tkinter import messagebox
 
 user = "admin"
 passw = "admin"
 
 def login():
     if userName.get() == user and paswd.get() == passw:
-        print("Login Berhasil")
+        messagebox.showinfo("Berhasil", "Login Berhasil")
     else:
-        print("Login Gagal")
+        messagebox.showwarning("Gagal","Login Gagal")
 
 
 # Membuat Entry dengan placeholder
@@ -48,7 +49,7 @@ paswd.pack(pady=10)
 add_placeholder(paswd, "Password")
 
 # membuat tombol
-button = Button(root, text="Login", command = login)
+button = Button(root, text="Login", command=login)
 button.pack()
 
 root.mainloop()
